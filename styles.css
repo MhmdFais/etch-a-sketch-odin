@@ -1,0 +1,40 @@
+:root{
+    --primary-color: #4A6274;
+    --secondary-color: #F7F8F3;
+    --headine-text: #F9DDD2;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.main-body-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    padding: 10px;
+    color: var(--headine-text);
+}
+
+h3{
+    font-family: 'DotGothic16', sans-serif;
+    /*8font-family: 'Silkscreen', sans-serif;**/
+    font-size: 50px;
+}
+
+.main-container{
+    display: flex;
+    max-width: 680px;
+    flex-wrap: wrap;
+}
+
+/**.child{
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    background-color: var(--secondary-color);
+}**/
