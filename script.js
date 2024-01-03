@@ -64,10 +64,15 @@ function colorChangeForBNW(){
         childConatiner.style.width = '40px';
     
         //HOVER EFFECT
-        childConatiner.addEventListener('mouseover',(child)=>{
-    
-            //COLOUR CHANGE
-            child.target.style.backgroundColor = 'black';
+        let hoverCount = 0;
+        childConatiner.addEventListener('mouseover', (event) => {
+            if (hoverCount < 10) {
+                hoverCount++;
+                let currentBrightness = 100 - hoverCount * 10;
+                event.target.style.filter = `brightness(${currentBrightness}%)`;
+            } else {
+                event.target.style.filter = 'brightness(0%)'; // Fully dark after 10 hovers
+            }
         });
     }
 }
